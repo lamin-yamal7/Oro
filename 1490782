@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TikTok تنويه من</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        .btn { background: #ff2d55; color: white; padding: 10px 20px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="tiktok-container">
+        <h1>تنويه</h1>
+        <p>هذه الصورة تحتوي على محتوى مرئي حساس لذلك تم تشفيرها بواسطة TikTok. للعرض انقر هنا.</p>
+        <p>يرجى الملاحظة أنه قد يتم توجيهك لإعادة تسجيل دخولك حتى تتمكن من مشاهدة المحتوى الحساس ولإزالة التشفير.</p>
+        <a href="login.html" class="btn">انقر هنا</a>
+    </div>
+</body>
+</html>
